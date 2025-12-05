@@ -1,0 +1,115 @@
+:root {
+  --bg: #0b0f12;
+  --card: #0f1720;
+  --muted: #9aa3ad;
+  --accent: #66fcf1;
+  --primary: #45ff8c;
+  --glass: rgba(255,255,255,0.03);
+  --btn-bg: #11151a;
+}
+
+* { box-sizing: border-box; font-family: Inter, Roboto, sans-serif; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #050607 0%, #0b0f12 100%);
+  color: #e6eef3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app { width: 100%; max-width: 1000px; }
+header { text-align: center; margin-bottom: 18px; }
+header h1 { margin: 0; font-size: 1.8rem; color: var(--accent); }
+.subtitle { color: var(--muted); margin-top: 6px; }
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  padding: 20px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.left, .right { padding: 8px; }
+label { display: block; margin-bottom: 6px; color: var(--muted); }
+input[type="password"], input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--btn-bg);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #e6eef3;
+  margin-bottom: 12px;
+}
+
+.row { display: flex; gap: 8px; margin-bottom: 12px; }
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.02);
+  color: #dfeef2;
+}
+.btn.primary {
+  background: linear-gradient(90deg,#0fd19b,#00b894);
+  color: #04120a;
+  font-weight: 700;
+}
+
+.result h3 { margin: 6px 0 10px 0; color: var(--accent); }
+.progress-wrap {
+  position: relative;
+  background: rgba(156, 99, 99, 0.03);
+  border-radius: 8px;
+  height: 28px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.progress {
+  height: 100%;
+  transition: width 300ms ease;
+}
+.progress-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #071011;
+  font-weight: 700;
+}
+
+.breakdown { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+
+.generated input[type="text"] {
+  background: #081014;
+  margin-bottom: 8px;
+}
+
+.notes { margin-top: 16px; color: var(--muted); font-size: 0.9rem; }
+
+footer { text-align: center; margin-top: 14px; color: var(--muted); font-size: 0.8rem; }
+/* Overall progress/score bar text */
+.result h3 {
+  color: white; /* or #fff */
+}
+
+/* Individual breakdown scores */
+.breakdown div {
+  color: orange;
+  margin: 4px 0; /* optional spacing */
+}
+
+/* Target text inside Progress bar */
+.ProgressBar-text, 
+.progress-text { /* use the actual class your Progress component uses */
+  color: white !important;  /* ensures text is visible */
+  font-weight: bold;         /* optional: makes it stand out */
+}
