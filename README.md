@@ -7,10 +7,15 @@ Features:
 - Generate secure random passwords (min length 6).
 - Optional MongoDB logging of masked checks.
 
-## Quick start (no DB)
+## Quick start 
 1. Clone / copy project folder `password-analyzer-mern`.
 2. Start backend:
    ```bash
    cd server
+   npm install
+   npm start
+2. Start Frontend:
+   ```bash
+   cd client
    npm install
    npm start
